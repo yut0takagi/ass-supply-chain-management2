@@ -68,7 +68,7 @@ def opt_orTools(jobs_data, job_priorities, num_machines):
             machines_schedule[machine].append((start, end, f'Job {job_id}'))
 
     # グラフの描画
-    fig, ax = plt.subplots()
+    fig, ax = plt.subplots(figsize=(10, 5))
     colors = list(mcolors.TABLEAU_COLORS.values())  # カラーパレット
     for machine, machine_schedule in machines_schedule.items():
         for job_num, (start, end, job_label) in enumerate(machine_schedule):
